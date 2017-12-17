@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"regexp"
 
 	"github.com/blang/semver"
 )
@@ -37,7 +38,8 @@ func main() {
 		os.Exit(128)
 	}
 
-	version, err := semver.Parse(flag.Arg(1))
+	var re = regexp.MustCompile(`^(\d+\.\d+)(\-.*)?$`)
+	version, err := semver.Parse(re.ReplaceAllString(flag.Arg(1), `$1.0$2`))
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Version %v is not a valid version.", flag.Arg(1))
 		fmt.Fprintf(os.Stderr, "Error: %q", err)
