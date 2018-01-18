@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning][semantic-versioning].
 
 No unreleased changed yet.
 
+## [v0.3.0] (2018-01-18)
+
+[Full Changelog][v0.2.0-v0.3.0]
+
+### Fixed
+
+- ARM binary is now ARMv6 compatible (Raspberry Pi 1/Zero)
+
+### Changed
+
+- Swapped version and condition arguments, makes more sense
+
 ## [v0.2.0] (2017-12-17)
 
 [Full Changelog][v0.1.0-v0.2.0]
@@ -27,4 +39,6 @@ No unreleased changed yet.
 [semantic-versioning]: http://semver.org/spec/v2.0.0.html
 [v0.1.0-v0.1.0]: https://github.com/hassio-addons/addon-homebridge/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/frenck/semver/tree/v0.1.0
+[v0.2.0-v0.3.0]: https://github.com/hassio-addons/addon-homebridge/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/frenck/semver/tree/v0.2.0
+[v0.3.0]: https://github.com/frenck/semver/tree/v0.3.0
