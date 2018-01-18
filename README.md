@@ -25,7 +25,7 @@ repository.
 ## Usage
 
 ```bash
-semver [-q] <condition> <version>
+semver [-q] <version> <condition>
 ```
 
 A `<condition>` specifies which versions are satisfactory, while `<version>`
@@ -74,16 +74,17 @@ Conditions can be combined with both AND and OR
 
 ```bash
 
-$ semver ">=1.0.0" "1.0.2"
+$ semver "1.0.2" ">=1.0.0"
 1.0.2 meets the condition.
 $ echo $?
 0
 
-$ semver "<2.0.0 || >=3.0.0" "2.0.2"                                                                                        2.0.2 does not meet the condition!
+$ semver "2.0.2" "<2.0.0 || >=3.0.0"
+2.0.2 does not meet the condition!
 $ echo $?
 1
 
-$ semver -q ">1.0.0 <2.0.0 || >3.0.0 !4.2.1" "1.9.9"
+$ semver -q "1.9.9" ">1.0.0 <2.0.0 || >3.0.0 !4.2.1"
 $ echo $?
 0
 
@@ -156,7 +157,7 @@ SOFTWARE.
 [issue]: https://github.com/frenck/semver/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [license-shield]: https://img.shields.io/github/license/frenck/semver.svg
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2017.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2018.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
 [releases-shield]: https://img.shields.io/github/release/frenck/semver.svg
 [releases]: https://github.com/frenck/semver/releases
