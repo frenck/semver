@@ -6,7 +6,7 @@ import (
 	"os"
 	"regexp"
 
-	"github.com/blang/semver"
+	"github.com/blang/semver/v4"
 )
 
 func main() {
